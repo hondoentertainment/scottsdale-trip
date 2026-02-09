@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Markdown content styles */
+  .prose h1 {
+    @apply text-3xl sm:text-4xl font-bold text-desert-900 mb-6 pb-3 border-b-2 border-sand-200;
+  }
+
+  .prose h2 {
+    @apply text-2xl sm:text-2xl font-bold text-desert-800 mt-10 mb-4 pb-2 border-b border-sand-100;
+  }
+
+  .prose h3 {
+    @apply text-xl font-semibold text-desert-700 mt-8 mb-3;
+  }
+
+  .prose h4 {
+    @apply text-lg font-semibold text-terracotta-700 mt-6 mb-2;
+  }
+
+  .prose p {
+    @apply text-desert-800 leading-relaxed mb-4;
+  }
+
+  .prose ul {
+    @apply list-disc pl-6 mb-4 space-y-1.5;
+  }
+
+  .prose ol {
+    @apply list-decimal pl-6 mb-4 space-y-1.5;
+  }
+
+  .prose li {
+    @apply text-desert-800 leading-relaxed;
+  }
+
+  .prose li > ul {
+    @apply mt-1.5 mb-0;
+  }
+
+  .prose strong {
+    @apply text-desert-900 font-semibold;
+  }
+
+  .prose em {
+    @apply text-desert-600 italic;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-sand-400 bg-sand-50 pl-4 py-3 pr-4 my-4 rounded-r-lg;
+  }
+
+  .prose blockquote p {
+    @apply text-desert-600 italic mb-0;
+  }
+
+  .prose hr {
+    @apply border-t-2 border-sand-200 my-8;
+  }
+
+  .prose a {
+    @apply text-terracotta-600 underline decoration-terracotta-200 hover:decoration-terracotta-400 transition-colors;
+  }
+
+  .prose code {
+    @apply bg-sand-100 text-terracotta-700 px-1.5 py-0.5 rounded text-sm font-mono;
+  }
+
+  /* Tables */
+  .prose table {
+    @apply w-full border-collapse mb-6 text-sm;
+  }
+
+  .prose thead {
+    @apply bg-desert-800;
+  }
+
+  .prose thead th {
+    @apply text-left px-4 py-3 text-sand-50 font-semibold text-xs uppercase tracking-wider;
+  }
+
+  .prose tbody tr {
+    @apply border-b border-sand-100 hover:bg-sand-50 transition-colors;
+  }
+
+  .prose tbody td {
+    @apply px-4 py-3 text-desert-800;
+  }
+
+  /* Checkboxes in task lists */
+  .prose input[type="checkbox"] {
+    @apply w-4 h-4 rounded border-desert-300 text-terracotta-500 mr-2 accent-terracotta-500;
+  }
+
+  .prose li:has(> input[type="checkbox"]) {
+    @apply list-none -ml-6;
+  }
+}
