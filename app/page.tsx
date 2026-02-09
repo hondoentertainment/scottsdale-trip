@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllDocs } from "@/lib/content";
+import { WeatherPreview } from "@/app/components/weather";
 
 export default function Home() {
   const docs = getAllDocs();
@@ -41,6 +42,11 @@ export default function Home() {
             </div>
           </Link>
         ))}
+      </section>
+
+      {/* Weather Preview */}
+      <section className="pb-10">
+        <WeatherPreview />
       </section>
 
       {/* Quick Reference */}

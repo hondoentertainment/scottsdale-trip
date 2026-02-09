@@ -22,9 +22,13 @@ export default function RootLayout({
                 Scottsdale Trip
               </span>
             </a>
-            <span className="text-xs text-desert-400 hidden sm:block">
-              Family Vacation HQ
-            </span>
+            <a
+              href="/weather"
+              className="text-sm text-desert-500 hover:text-terracotta-600 transition-colors flex items-center gap-1.5"
+            >
+              <span>&#127780;&#65039;</span>
+              <span className="hidden sm:inline">Weather</span>
+            </a>
           </div>
         </nav>
         <main>{children}</main>
